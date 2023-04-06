@@ -22,12 +22,12 @@ const starStyle = {
   maxWidth: "100%",
 };
 interface FormProps {
-  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+  onSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 const Forms = (props: FormProps) => {
   const [star, setStar] = useState(0);
   const [comment, setComment] = useState("");
-  const [name, setName] = useState('')
+  const [name, setName] = useState("");
 
   const handleEventChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
